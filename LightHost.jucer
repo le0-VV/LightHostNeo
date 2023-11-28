@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<JUCERPROJECT id="NTe0XB0ij" name="Light Host" projectType="guiapp" version="1.2.0"
+<JUCERPROJECT id="NTe0XB0ij" name="LightHost Neo" projectType="guiapp" version="2.0.0"
               juceLinkage="amalg_multi" juceFolder="../../../juce" buildVST="1"
               buildRTAS="0" buildAU="1" vstFolderMac="~/SDKs/vstsdk2.4" vstFolderPC="c:\SDKs\vstsdk2.4"
               rtasFolderMac="~/SDKs/PT_80_SDK" rtasFolderPC="c:\SDKs\PT_80_SDK"
@@ -9,19 +9,18 @@
               pluginIsSynth="0" pluginWantsMidiIn="0" pluginProducesMidiOut="0"
               pluginSilenceInIsSilenceOut="0" pluginTailLength="0" pluginEditorRequiresKeys="0"
               pluginAUExportPrefix="JuceProjectAU" pluginAUViewClass="JuceProjectAU_V1"
-              pluginRTASCategory="" bundleIdentifier="com.rolandoislas.lighthost"
-              jucerVersion="4.2.4" companyName="Rolando Islas" includeBinaryInAppConfig="1"
-              companyWebsite="https://www.rolandoislas.com" companyEmail="admin@rolandoislas.com">
+              pluginRTASCategory="" bundleIdentifier="com.leonardw.lighthostneo"
+              companyName="Leonard Wang" includeBinaryInAppConfig="1" pluginFormats="buildVST,buildAU"
+              displaySplashScreen="1" jucerFormatVersion="1">
   <EXPORTFORMATS>
     <XCODE_MAC targetFolder="Builds/MacOSX" vstFolder="" rtasFolder="~/SDKs/PT_80_SDK"
                objCExtraSuffix="M73TRi" vst3Folder="" smallIcon="pmwje3" bigIcon="kxxp8K">
       <CONFIGURATIONS>
         <CONFIGURATION name="Debug" isDebug="1" optimisation="1" targetName="Light Host"
-                       osxSDK="default" osxCompatibility="default" osxArchitecture="default"
-                       headerPath=""/>
+                       osxSDK="default" osxCompatibility="default" headerPath=""/>
         <CONFIGURATION name="Release" isDebug="0" optimisation="2" targetName="Light Host"
-                       osxSDK="default" osxCompatibility="10.7 SDK" osxArchitecture="default"
-                       headerPath="" cppLanguageStandard="c++11" cppLibType="libc++"/>
+                       osxSDK="default" osxCompatibility="10.7 SDK" headerPath="" cppLanguageStandard="c++11"
+                       cppLibType="libc++" macOSDeploymentTarget="10.7"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
         <MODULEPATH id="juce_video" path="lib\juce"/>
@@ -40,31 +39,6 @@
         <MODULEPATH id="juce_audio_basics" path="lib\juce"/>
       </MODULEPATHS>
     </XCODE_MAC>
-    <VS2015 targetFolder="Builds/VisualStudio2015" vstFolder="" vst3Folder=""
-            smallIcon="pmwje3" bigIcon="kxxp8K" userNotes="Place ASIO SDK headers in juce folder.">
-      <CONFIGURATIONS>
-        <CONFIGURATION name="Debug" winWarningLevel="4" generateManifest="1" winArchitecture="x64"
-                       isDebug="1" optimisation="1" targetName="Light Host"/>
-        <CONFIGURATION name="Release" winWarningLevel="4" generateManifest="1" winArchitecture="x64"
-                       isDebug="0" optimisation="3" targetName="Light Host"/>
-      </CONFIGURATIONS>
-      <MODULEPATHS>
-        <MODULEPATH id="juce_video" path="lib\juce"/>
-        <MODULEPATH id="juce_opengl" path="lib\juce"/>
-        <MODULEPATH id="juce_gui_extra" path="lib\juce"/>
-        <MODULEPATH id="juce_gui_basics" path="lib\juce"/>
-        <MODULEPATH id="juce_graphics" path="lib\juce"/>
-        <MODULEPATH id="juce_events" path="lib\juce"/>
-        <MODULEPATH id="juce_data_structures" path="lib\juce"/>
-        <MODULEPATH id="juce_cryptography" path="lib\juce"/>
-        <MODULEPATH id="juce_core" path="lib\juce"/>
-        <MODULEPATH id="juce_audio_utils" path="lib\juce"/>
-        <MODULEPATH id="juce_audio_processors" path="lib\juce"/>
-        <MODULEPATH id="juce_audio_formats" path="lib\juce"/>
-        <MODULEPATH id="juce_audio_devices" path="lib\juce"/>
-        <MODULEPATH id="juce_audio_basics" path="lib\juce"/>
-      </MODULEPATHS>
-    </VS2015>
     <CODEBLOCKS_LINUX targetFolder="Builds/CodeBlocksLinux" vstFolder="" vst3Folder=""
                       smallIcon="pmwje3" bigIcon="kxxp8K" userNotes="Header search path for Steinberg SDK not being added to codeblocks.">
       <CONFIGURATIONS>
@@ -113,7 +87,7 @@
       </MODULEPATHS>
     </LINUX_MAKE>
   </EXPORTFORMATS>
-  <MAINGROUP id="YdWL7hi7p" name="Light Host">
+  <MAINGROUP id="YdWL7hi7p" name="LightHost Neo">
     <GROUP id="{1B23ABDC-E658-7C9C-3584-0C960D2AE323}" name="Source">
       <FILE id="2b09bSUt" name="PluginWindow.cpp" compile="1" resource="0"
             file="Source/PluginWindow.cpp"/>
@@ -131,11 +105,11 @@
             file="Resources/menu_icon_white.png"/>
     </GROUP>
   </MAINGROUP>
-  <JUCEOPTIONS JUCE_WASAPI="enabled" JUCE_DIRECTSOUND="enabled" JUCE_ALSA="enabled"
-               JUCE_QUICKTIME="disabled" JUCE_USE_FLAC="disabled" JUCE_USE_OGGVORBIS="disabled"
-               JUCE_USE_CDBURNER="disabled" JUCE_USE_CDREADER="disabled" JUCE_USE_CAMERA="disabled"
-               JUCE_PLUGINHOST_VST="enabled" JUCE_PLUGINHOST_AU="enabled" JUCE_WEB_BROWSER="disabled"
-               JUCE_PLUGINHOST_VST3="enabled" JUCE_ASIO="enabled"/>
+  <JUCEOPTIONS JUCE_WASAPI="1" JUCE_DIRECTSOUND="1" JUCE_ALSA="1" JUCE_QUICKTIME="disabled"
+               JUCE_USE_FLAC="0" JUCE_USE_OGGVORBIS="0" JUCE_USE_CDBURNER="0"
+               JUCE_USE_CDREADER="0" JUCE_USE_CAMERA="0" JUCE_PLUGINHOST_VST="1"
+               JUCE_PLUGINHOST_AU="1" JUCE_WEB_BROWSER="0" JUCE_PLUGINHOST_VST3="1"
+               JUCE_ASIO="1"/>
   <MODULES>
     <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="1"/>
     <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="1"/>
